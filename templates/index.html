@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Controle de Ar-Condicionado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 1rem;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .btn.desligar {
+            background-color: #dc3545;
+        }
+
+        .btn.desligar:hover {
+            background-color: #a71d2a;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ar-Condicionado está: <strong>{{ estado }}</strong></h1>
+    <a href="{{ url_for('ligar') }}" class="btn">Ligar</a>
+    <a href="{{ url_for('desligar') }}" class="btn desligar">Desligar</a>
+</body>
+</html>
