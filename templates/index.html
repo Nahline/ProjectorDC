@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Controle de Ar-Condicionado</title>
+    <link rel="stylesheet" href="/styles/pagina.css">
+
+</head>
+
+<body>
+    <div class="container-titulo">
+        <img src="/img/logo-catolica-da-paraiba.png" alt="Logo Católica da Paraíba" class="logo-centro">
+    </div>
+
+    <button onclick="openPopup()"><img src="/img/icone-lab.jpg" alt="Icone do Laboratorio" class="icone-lab"></button>
+
+    <div id="popup" class="popup">
+        <div class="container-popup">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h1>Ar-Condicionado está: <strong>{{ estado }}</strong></h1>
+            <a href="{{ url_for('ligar') }}" class="btn">Ligar</a>
+            <a href="{{ url_for('desligar') }}" class="btn desligar">Desligar</a>
+        </div>
+    </div>
+
+    <script src="/js/popup.js"></script>
+</body>
+
+</html>
